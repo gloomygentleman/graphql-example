@@ -2,11 +2,13 @@
   "private": true,
   "name": "graphql-example",
   "version": "0.0.0",
-  "type": "module",
+  "type": "commonjs",
   "main": "server/index.js",
   "scripts": {
     "start": "vite",
-    "start:server": "nodemon -e js,json,graphql -- --experimental-global-fetch"
+    "start:server": "nodemon server/index.js -e js,json,graphql -- --experimental-global-fetch",
+    "start:sub": "vite --mode sub --config vite.sub.config.js",
+    "start:sub:server": "nodemon server_subscription/server/index.js -e js,json,graphql -- --experimental-global-fetch"
   },
   "dependencies": {
     "@apollo/client": "^3.8.5",
@@ -14,13 +16,10 @@
     "@graphql-tools/schema": "^10.0.0",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "graphql": "^16.8.1",
     "graphql-subscriptions": "^2.0.0",
     "graphql-ws": "^5.14.1",
-    "mongodb": "^6.1.0",
-    "node-fetch": "^3.3.2",
     "nodemon": "^3.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
