@@ -4,18 +4,28 @@
 $ pnpm install
 ```
 
-## Client
-
-### 시작하기
+### Client
 
 ```bash
 $ pnpm start
 ```
 
-## Server
-
 ### 시작하기
 
 ```bash
 $ pnpm start:server
+```
+
+## Scription 예제
+
+### Client
+
+```bash
+$ pnpm start:sub
+```
+
+### 시작하기
+
+```bash
+$ pnpm start:sub:server
 ```
